@@ -1,0 +1,381 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "email": "admin@jobfinder.hu",
+      "fullName": "Rendszer Admin",
+      "role": "admin",
+      "isActive": true,
+      "passwordHash": "$2b$10$l4gwtrh20RIgYQDRGRaFK.GMhtZLpP2LZVl/TDFD9oAz9rk/CdixG",
+      "createdAt": "2026-04-01T10:00:00.000Z",
+      "updatedAt": "2026-04-01T10:00:00.000Z"
+    },
+    {
+      "id": "u-rec-1",
+      "email": "recruiter@blueorbit.hu",
+      "fullName": "Kovács Dóra",
+      "role": "recruiter",
+      "isActive": true,
+      "passwordHash": "$2b$10$uMsq2jvia04ASjbbr2UOx.KQD4E84XcCZ9qVgU4CXveXF2GZh844W",
+      "createdAt": "2026-04-01T10:00:00.000Z",
+      "updatedAt": "2026-04-01T10:00:00.000Z"
+    },
+    {
+      "id": "u-js-1",
+      "email": "allas@pelda.hu",
+      "fullName": "Nagy Ádám",
+      "role": "jobseeker",
+      "isActive": true,
+      "passwordHash": "$2b$10$uMsq2jvia04ASjbbr2UOx.KQD4E84XcCZ9qVgU4CXveXF2GZh844W",
+      "createdAt": "2026-04-01T10:00:00.000Z",
+      "updatedAt": "2026-04-18T15:59:31.854Z"
+    },
+    {
+      "id": "u-molcsc451cjp29pm",
+      "email": "asd@asd.com",
+      "fullName": "asd",
+      "role": "jobseeker",
+      "isActive": true,
+      "passwordHash": "$2b$10$AhtJ3dbLd9ynr8YHVa5L/eAOJJxc69kTgYZCGX07ucV1i46iv.m52",
+      "createdAt": "2026-04-30T10:40:53.333Z",
+      "updatedAt": "2026-04-30T10:40:53.333Z"
+    },
+    {
+      "id": "u-mold03aq3jqvw6tu",
+      "email": "test@test.hu",
+      "fullName": "Test User",
+      "role": "jobseeker",
+      "isActive": true,
+      "passwordHash": "$2b$10$dPCetTXEgjRtR35EQRUYyOJ7TT0.e7GfXMvZ30Tvuw250bniDuq7G",
+      "createdAt": "2026-04-30T10:46:55.154Z",
+      "updatedAt": "2026-04-30T10:46:55.154Z"
+    },
+    {
+      "id": "u-morbjmqfajl37zil",
+      "email": "tesztmail@teszt.com",
+      "fullName": "Teszt Aladár",
+      "role": "jobseeker",
+      "isActive": true,
+      "passwordHash": "$2b$10$yZgKCCaJWYdexX76RYcAC.XQU2NQql4nY.S5yVFqY1ZZPTwTF3GQy",
+      "createdAt": "2026-05-04T14:52:44.631Z",
+      "updatedAt": "2026-05-04T14:52:44.631Z"
+    },
+    {
+      "id": "u-morbv1icemdcwslm",
+      "email": "teszt@teszt.com",
+      "fullName": "teszt",
+      "role": "jobseeker",
+      "isActive": true,
+      "passwordHash": "$2b$10$6KtMlkiztT1KfKviw0/5oeQSQ/zxrxhQYwb8BawPGlyH94UmRjQMS",
+      "createdAt": "2026-05-04T15:01:36.996Z",
+      "updatedAt": "2026-05-04T15:01:36.996Z"
+    },
+    {
+      "id": "u-morc32sju2vki0su",
+      "email": "recruiter-test@test.hu",
+      "fullName": "Teszt Recruiter",
+      "role": "jobseeker",
+      "isActive": true,
+      "passwordHash": "$2b$10$e3Zrf0x5QUMH4BhHKiltq.bDfeQ/E3GhgTgLT8X7VxbsWb9ebl2kq",
+      "createdAt": "2026-05-04T15:07:51.907Z",
+      "updatedAt": "2026-05-04T15:07:51.907Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-frontend",
+      "name": "Frontend",
+      "slug": "frontend"
+    },
+    {
+      "id": "cat-backend",
+      "name": "Backend",
+      "slug": "backend"
+    },
+    {
+      "id": "cat-fullstack",
+      "name": "Full Stack",
+      "slug": "full-stack"
+    },
+    {
+      "id": "cat-ux",
+      "name": "UX/UI",
+      "slug": "ux-ui"
+    },
+    {
+      "id": "cat-qa",
+      "name": "QA",
+      "slug": "qa"
+    }
+  ],
+  "skills": [
+    {
+      "id": "sk-vue",
+      "name": "Vue"
+    },
+    {
+      "id": "sk-ts",
+      "name": "TypeScript"
+    },
+    {
+      "id": "sk-node",
+      "name": "Node.js"
+    },
+    {
+      "id": "sk-sql",
+      "name": "SQL"
+    },
+    {
+      "id": "sk-a11y",
+      "name": "Accessibility"
+    }
+  ],
+  "companies": [
+    {
+      "id": "comp-001",
+      "ownerUserId": "u-rec-1",
+      "name": "Blue Orbit Labs",
+      "description": "Digitális termékfejlesztés design fókuszban.",
+      "websiteUrl": "https://blueorbit.example.com",
+      "location": "Budapest",
+      "createdAt": "2026-04-02T09:00:00.000Z",
+      "updatedAt": "2026-04-02T09:00:00.000Z"
+    },
+    {
+      "id": "comp-mo4iokjo4qbwcfht",
+      "ownerUserId": "u-admin",
+      "name": "ceg123",
+      "description": "teszt teszt",
+      "websiteUrl": "https://www.weboldal.com",
+      "location": "otthon",
+      "createdAt": "2026-04-18T15:53:50.340Z",
+      "updatedAt": "2026-04-18T15:53:50.340Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-001",
+      "companyId": "comp-001",
+      "categoryId": "cat-frontend",
+      "title": "Frontend Vue fejlesztő",
+      "description": "Vue 3 + TypeScript alapú termékfejlesztés.",
+      "employmentType": "full-time",
+      "workMode": "hybrid",
+      "city": "Budapest",
+      "salaryMin": 850000,
+      "salaryMax": 1150000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": "2026-07-01",
+      "skillIds": [
+        "sk-vue",
+        "sk-ts",
+        "sk-a11y"
+      ],
+      "createdAt": "2026-04-03T12:00:00.000Z",
+      "updatedAt": "2026-04-03T12:00:00.000Z"
+    },
+    {
+      "id": "job-mo4ipbl5hbksexrn",
+      "companyId": "comp-mo4iokjo4qbwcfht",
+      "categoryId": "cat-fullstack",
+      "title": "teszt pozi",
+      "description": "dfgdfg",
+      "employmentType": "contract",
+      "workMode": "remote",
+      "city": "lol",
+      "salaryMin": 10000,
+      "salaryMax": 10000000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": null,
+      "skillIds": [
+        "sk-vue",
+        "sk-ts",
+        "sk-node",
+        "sk-sql",
+        "sk-a11y"
+      ],
+      "createdAt": "2026-04-18T15:54:25.385Z",
+      "updatedAt": "2026-04-18T15:58:08.519Z"
+    },
+    {
+      "id": "job-202605-01",
+      "companyId": "comp-001",
+      "categoryId": "cat-backend",
+      "title": "Backend fejlesztő (Node.js)",
+      "description": "Szkalábilis API-k fejlesztése Node.js és Express alapon. SQL ismeretek szükségesek.",
+      "employmentType": "full-time",
+      "workMode": "remote",
+      "city": "Budapest",
+      "salaryMin": 900000,
+      "salaryMax": 1300000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": "2026-08-15",
+      "skillIds": [
+        "sk-node",
+        "sk-sql",
+        "sk-ts"
+      ],
+      "createdAt": "2026-05-04T16:00:00.000Z",
+      "updatedAt": "2026-05-04T16:00:00.000Z"
+    },
+    {
+      "id": "job-202605-02",
+      "companyId": "comp-001",
+      "categoryId": "cat-ux",
+      "title": "UI Designer",
+      "description": "Figma-ban dolgozó designer kerestetik, akinek szívügyén áll a hozzáférhetőség.",
+      "employmentType": "full-time",
+      "workMode": "hybrid",
+      "city": "Budapest",
+      "salaryMin": 650000,
+      "salaryMax": 900000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": "2026-07-30",
+      "skillIds": [
+        "sk-a11y"
+      ],
+      "createdAt": "2026-05-04T15:50:00.000Z",
+      "updatedAt": "2026-05-04T15:50:00.000Z"
+    },
+    {
+      "id": "job-202605-03",
+      "companyId": "comp-001",
+      "categoryId": "cat-qa",
+      "title": "QA Engineer (Automatizált tesztelés)",
+      "description": "Automatizált teszt keretrendszerek fejlesztése és karbantartása JavaScript alapon.",
+      "employmentType": "full-time",
+      "workMode": "onsite",
+      "city": "Pécs",
+      "salaryMin": 700000,
+      "salaryMax": 950000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": "2026-08-01",
+      "skillIds": [
+        "sk-ts",
+        "sk-vue"
+      ],
+      "createdAt": "2026-05-04T15:45:00.000Z",
+      "updatedAt": "2026-05-04T15:45:00.000Z"
+    },
+    {
+      "id": "job-202605-04",
+      "companyId": "comp-001",
+      "categoryId": "cat-frontend",
+      "title": "React fejlesztő (internship)",
+      "description": "Nemzetközi tapasztalat szerzésének lehetősége 3 hónapos internship programban.",
+      "employmentType": "internship",
+      "workMode": "hybrid",
+      "city": "Budapest",
+      "salaryMin": 250000,
+      "salaryMax": 350000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": "2026-06-30",
+      "skillIds": [
+        "sk-ts"
+      ],
+      "createdAt": "2026-05-04T15:40:00.000Z",
+      "updatedAt": "2026-05-04T15:40:00.000Z"
+    },
+    {
+      "id": "job-202605-05",
+      "companyId": "comp-001",
+      "categoryId": "cat-fullstack",
+      "title": "Full Stack fejlesztő (részmunkaidő)",
+      "description": "Rugalmas, otthonról elvégezhető részmunkaidős pozíció startupok támogatására.",
+      "employmentType": "part-time",
+      "workMode": "remote",
+      "city": "Debrecen",
+      "salaryMin": 500000,
+      "salaryMax": 700000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": "2026-07-15",
+      "skillIds": [
+        "sk-vue",
+        "sk-node",
+        "sk-sql"
+      ],
+      "createdAt": "2026-05-04T15:35:00.000Z",
+      "updatedAt": "2026-05-04T15:35:00.000Z"
+    },
+    {
+      "id": "job-202605-06",
+      "companyId": "comp-001",
+      "categoryId": "cat-backend",
+      "title": "DevOps / Backend Engineer",
+      "description": "Docker és Kubernetes ismerettel rendelkező mérnök kerestetik.",
+      "employmentType": "full-time",
+      "workMode": "remote",
+      "city": "Szombathely",
+      "salaryMin": 1000000,
+      "salaryMax": 1400000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": "2026-08-20",
+      "skillIds": [
+        "sk-node",
+        "sk-sql"
+      ],
+      "createdAt": "2026-05-04T15:30:00.000Z",
+      "updatedAt": "2026-05-04T15:30:00.000Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app-001",
+      "jobId": "job-001",
+      "applicantUserId": "u-js-1",
+      "cvUrl": "https://example.com/cv/nagy-adam.pdf",
+      "motivation": "Tapasztalatom van Vue komponens architektúrában.",
+      "status": "new",
+      "createdAt": "2026-04-05T08:45:00.000Z",
+      "updatedAt": "2026-04-05T08:45:00.000Z"
+    },
+    {
+      "id": "app-mo4iq729bf9gypg6",
+      "jobId": "job-mo4ipbl5hbksexrn",
+      "applicantUserId": "u-js-1",
+      "cvUrl": "https://example.com/cv/sajat-cv.pdf",
+      "motivation": "Röviden bemutatom, miért passzolok a pozícióhoz. asdadasdasdasd",
+      "status": "new",
+      "createdAt": "2026-04-18T15:55:06.177Z",
+      "updatedAt": "2026-04-18T15:55:06.177Z"
+    },
+    {
+      "id": "app-morbozxgbkbaoal2",
+      "jobId": "job-mo4ipbl5hbksexrn",
+      "applicantUserId": "u-morbjmqfajl37zil",
+      "cvUrl": "https://example.com/cv/sajat-cv.pdf",
+      "motivation": "Röviden bemutatom, miért passzolok a pozícióhoz.",
+      "status": "new",
+      "createdAt": "2026-05-04T14:56:55.012Z",
+      "updatedAt": "2026-05-04T14:56:55.012Z"
+    }
+  ],
+  "savedJobs": [
+    {
+      "id": "saved-001",
+      "userId": "u-js-1",
+      "jobId": "job-001",
+      "createdAt": "2026-04-06T11:25:00.000Z"
+    },
+    {
+      "id": "saved-molcsp2q1syjw8vv",
+      "userId": "u-molcsc451cjp29pm",
+      "jobId": "job-001",
+      "createdAt": "2026-04-30T10:41:10.130Z"
+    },
+    {
+      "id": "saved-mold0wydi0xfschb",
+      "userId": "u-mold03aq3jqvw6tu",
+      "jobId": "job-001",
+      "createdAt": "2026-04-30T10:47:33.589Z"
+    }
+  ]
+}

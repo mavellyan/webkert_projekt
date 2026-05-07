@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: jobfinder-api
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JWT_SECRET
+        sync: false
