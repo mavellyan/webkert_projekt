@@ -79,6 +79,16 @@
       "passwordHash": "$2b$10$e3Zrf0x5QUMH4BhHKiltq.bDfeQ/E3GhgTgLT8X7VxbsWb9ebl2kq",
       "createdAt": "2026-05-04T15:07:51.907Z",
       "updatedAt": "2026-05-04T15:07:51.907Z"
+    },
+    {
+      "id": "u-movhp3t5wfufbj9g",
+      "email": "asdasd@asd.com",
+      "fullName": "asdasdasd",
+      "role": "recruiter",
+      "isActive": true,
+      "passwordHash": "$2b$10$XuEBq0WJhXQPLGIzWRM9K.OUrnuFIj89JT/reAefPPIf.adY3njL.",
+      "createdAt": "2026-05-07T12:56:02.441Z",
+      "updatedAt": "2026-05-07T12:56:02.441Z"
     }
   ],
   "categories": [
@@ -150,6 +160,16 @@
       "location": "otthon",
       "createdAt": "2026-04-18T15:53:50.340Z",
       "updatedAt": "2026-04-18T15:53:50.340Z"
+    },
+    {
+      "id": "comp-movhpyrt23e6vjln",
+      "ownerUserId": "u-movhp3t5wfufbj9g",
+      "name": "Teszt Ceg",
+      "description": "Ez egy teszt ceg",
+      "websiteUrl": "https://tesztoldal.com",
+      "location": "Tesztvaros",
+      "createdAt": "2026-05-07T12:56:42.569Z",
+      "updatedAt": "2026-05-07T12:56:42.569Z"
     }
   ],
   "jobs": [
@@ -324,6 +344,30 @@
       ],
       "createdAt": "2026-05-04T15:30:00.000Z",
       "updatedAt": "2026-05-04T15:30:00.000Z"
+    },
+    {
+      "id": "job-movhqvrjt2bg29pg",
+      "companyId": "comp-movhpyrt23e6vjln",
+      "categoryId": "cat-frontend",
+      "title": "Teszt Pozicio",
+      "description": "Ez egy teszt pozicio a teszt cegnel, teszt varosban.",
+      "employmentType": "full-time",
+      "workMode": "hybrid",
+      "city": "Teszt Varos",
+      "salaryMin": 500000,
+      "salaryMax": 5000000,
+      "currency": "HUF",
+      "status": "published",
+      "expiresAt": null,
+      "skillIds": [
+        "sk-vue",
+        "sk-ts",
+        "sk-node",
+        "sk-sql",
+        "sk-a11y"
+      ],
+      "createdAt": "2026-05-07T12:57:25.327Z",
+      "updatedAt": "2026-05-07T12:57:25.327Z"
     }
   ],
   "applications": [
@@ -356,6 +400,16 @@
       "status": "new",
       "createdAt": "2026-05-04T14:56:55.012Z",
       "updatedAt": "2026-05-04T14:56:55.012Z"
+    },
+    {
+      "id": "app-movhrlx3cjmz3bl8",
+      "jobId": "job-movhqvrjt2bg29pg",
+      "applicantUserId": "u-molcsc451cjp29pm",
+      "cvUrl": "https://teszt-oneletrajz.com",
+      "motivation": "Teszt jelentkezo most jelentkezett a teszt poziciora, teszt ceghez, tesztvarosba.",
+      "status": "interview",
+      "createdAt": "2026-05-07T12:57:59.223Z",
+      "updatedAt": "2026-05-07T12:58:17.035Z"
     }
   ],
   "savedJobs": [

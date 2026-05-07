@@ -469,6 +469,15 @@ app.get('/api/applications', authenticateToken, async (req, res) => {
   const db = await readDb()
 
   const companyId = typeof req.query.companyId === 'string' ? req.query.companyId : ''
+  const applicantUserId = typeof req.query.applicantUserId === 'string' ? req.query.applicantUserId : ''
+  const isAdmin = req.user.role === 'admin'
+  const isRecruiter = req.user.role === 'recruiter'
+
+  const ownedCompanyIds = new Set(
+    db.companies
+      .filter((company) => company.ownerUserId === req.user.id)
+      .map((company) => company.id)
+  )
 
   let list = db.applications.map((appItem) => {
     const job = db.jobs.find((jobItem) => jobItem.id === appItem.jobId)
@@ -482,8 +491,28 @@ app.get('/api/applications', authenticateToken, async (req, res) => {
     }
   })
 
+  if (!isAdmin) {
+    if (isRecruiter) {
+      list = list.filter((item) => item.companyId && ownedCompanyIds.has(item.companyId))
+    } else {
+      list = list.filter((item) => item.applicantUserId === req.user.id)
+    }
+  }
+
   if (companyId) {
+    if (!isAdmin && !ownedCompanyIds.has(companyId)) {
+      return res.status(403).json({ message: 'Ehhez a céghez nincs jogosultságod jelentkezéseket megtekinteni.' })
+    }
+
     list = list.filter((item) => item.companyId === companyId)
+  }
+
+  if (applicantUserId) {
+    if (!isAdmin && applicantUserId !== req.user.id) {
+      return res.status(403).json({ message: 'Csak a saját jelentkezéseidet tekintheted meg.' })
+    }
+
+    list = list.filter((item) => item.applicantUserId === applicantUserId)
   }
 
   res.json(list)
@@ -529,7 +558,7 @@ app.post('/api/applications', authenticateToken, async (req, res) => {
   return res.status(201).json(application)
 })
 
-app.put('/api/applications/:id/status', authenticateToken, requireAdmin, async (req, res) => {
+app.put('/api/applications/:id/status', authenticateToken, async (req, res) => {
   const { status } = req.body
 
   if (!status) {
@@ -543,11 +572,32 @@ app.put('/api/applications/:id/status', authenticateToken, requireAdmin, async (
     return res.status(404).json({ message: 'A jelentkezés nem található.' })
   }
 
+  const job = db.jobs.find((item) => item.id === application.jobId)
+  if (!job) {
+    return res.status(404).json({ message: 'A jelentkezéshez tartozó álláshirdetés nem található.' })
+  }
+
+  const company = db.companies.find((item) => item.id === job.companyId)
+  const canModerate =
+    req.user.role === 'admin' || (req.user.role === 'recruiter' && company?.ownerUserId === req.user.id)
+
+  if (!canModerate) {
+    return res.status(403).json({ message: 'Ehhez a jelentkezéshez nincs módosítási jogosultságod.' })
+  }
+
   application.status = status
   application.updatedAt = nowIso()
 
   await writeDb(db)
-  return res.json(application)
+
+  const applicant = db.users.find((item) => item.id === application.applicantUserId)
+
+  return res.json({
+    ...application,
+    companyId: job.companyId,
+    jobTitle: job.title,
+    applicantName: applicant?.fullName ?? 'Ismeretlen jelentkező'
+  })
 })
 
 app.get('/api/saved-jobs', authenticateToken, async (req, res) => {
